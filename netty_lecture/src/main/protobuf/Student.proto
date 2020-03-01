@@ -1,0 +1,30 @@
+syntax = "proto2";
+
+package com.ssvictor.netty.netty_protobuf;
+
+option optimize_for = SPEED;
+option java_package = "com.ssvictor.netty.netty_protobuf";
+option java_outer_classname = "DataInfo";
+
+message MyMessage{
+    enum DataType{
+        PersonType = 1;
+        TeacherType = 2;
+    }
+
+    required DataType data_type = 1;
+    oneof data_body{
+        Teacher teacher = 2;
+        Student student = 3;
+    }
+}
+
+message Teacher{
+    optional string name = 1;
+    optional int32 age = 2;
+}
+message Student{
+    optional string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}

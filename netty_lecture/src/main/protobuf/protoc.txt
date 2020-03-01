@@ -1,0 +1,2 @@
+protoc --proto_path=H:\GitHubRepo\netty_lecture\src\main\protobuf   --java_out=H:\GitHubRepo\netty_lecture\src\main\java
+   Student.proto
